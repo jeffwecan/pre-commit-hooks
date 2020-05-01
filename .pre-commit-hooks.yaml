@@ -94,6 +94,27 @@
     entry: check-yaml
     language: python
     types: [yaml]
+-   id: check-terraform
+    name: Check Terraform
+    description: This hook checks for terraform fmt diffs
+    entry: check-terraform
+    language: python
+    types: [hcl, tf]
+-   id: check-markdown
+    name: Check markdown
+    description: This hook checks for terraform fmt diffs
+    entry: check-markdown
+    language: python
+    types: [md]
+-   id: pyupgrade
+    name: pyupgrade
+    description: Automatically upgrade syntax for newer versions.
+    entry: pyupgrade
+    language: python
+    types: [python]
+    # for backward compatibility
+    files: ''
+    minimum_pre_commit_version: 0.15.0
 -   id: debug-statements
     name: Debug Statements (Python)
     description: Check for debugger imports and py37+ `breakpoint()` calls in python source.
